@@ -1,0 +1,17 @@
+{
+  "ignore": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/.git/**",
+    "**/build/**",
+    "**/coverage/**",
+    "**/*.min.js",
+    "**/*.min.css"
+  ],
+  "customPatterns": [],
+  "enableEntropy": false,
+  "entropyThreshold": 4.5,
+  "outputFormat": "terminal",
+  "parallel": true,
+  "workers": 4
+}

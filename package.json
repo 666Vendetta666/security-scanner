@@ -1,0 +1,82 @@
+{
+  "name": "@onamfc/security-scanner",
+  "version": "1.0.0",
+  "description": "Enterprise-grade CLI security scanner for detecting secrets and vulnerabilities in codebases",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "secscan": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onamfc/security-scanner.git"
+  },
+  "bugs": {
+    "url": "https://github.com/onamfc/security-scanner/issues"
+  },
+  "homepage": "https://github.com/onamfc/security-scanner#readme",
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,md}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,md}\""
+  },
+  "keywords": [
+    "security",
+    "scanner",
+    "secrets",
+    "sast",
+    "cli",
+    "vulnerability",
+    "api-keys",
+    "security-scanner",
+    "code-analysis"
+  ],
+  "author": "onamfc",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "cli-progress": "^3.12.0",
+    "cli-table3": "^0.6.5",
+    "commander": "^12.1.0",
+    "cosmiconfig": "^9.0.0",
+    "fast-glob": "^3.3.2",
+    "ignore": "^6.0.2",
+    "is-binary-path": "^2.1.0",
+    "ora": "^8.1.1"
+  },
+  "devDependencies": {
+    "@types/cli-progress": "^3.11.6",
+    "@types/node": "^22.10.2",
+    "@typescript-eslint/eslint-plugin": "^8.18.1",
+    "@typescript-eslint/parser": "^8.18.1",
+    "@vitest/coverage-v8": "^2.1.8",
+    "eslint": "^9.16.0",
+    "prettier": "^3.4.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
