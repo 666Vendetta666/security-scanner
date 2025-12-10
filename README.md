@@ -1,6 +1,6 @@
 # Security Scanner
 
-Enterprise-grade CLI security scanner for detecting exposed secrets and code vulnerabilities in your codebase.
+CLI security scanner for detecting exposed secrets and code vulnerabilities in your codebase.
 
 ## Features
 
